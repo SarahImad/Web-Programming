@@ -53,44 +53,35 @@
 </head>
 <body>
   <script>
-document.addEventListener("DOMContentLoaded", function() {
-    let b = document.getElementById('b1');
-    let p = document.getElementById('p');
-    let s = 0;
-
-    b.addEventListener('click', function() {
-        let xx = new XMLHttpRequest();
-        xx.open('GET', 'aa.json', true);
-        xx.onload = function() {
-            let res = JSON.parse(xx.responseText);
-            let a = "";
-            for(let i = 0; i < res.length; i++) {
-                a += '<p>' + res[i].name + '</p>';
-            }
-            p.insertAdjacentHTML('beforeend', a);
-        };
-        
-        xx.send();
-        s++;
-        if(s > 3) {
-            b.style.display = 'none';
-        }
-    });
-});
+            document.addEventListener("DOMContentLoaded", function() {
 
 
+console.log("Hello! We're practicing Ajax.");
+ let v = document.getElementById('b1')
+v.addEventListener('click', function(){
+    console.log("BUTTON 1 HAS BEEN CLICKED! ");
+
+            
+
+let xx = new XMLHttpRequest();
 
 
+xx.onload= function(){
+    console.log("This is response text: " + xx.responseText);
+
+}
+xx.open('Get','Test.txt', true)
+xx.send()
+})})
 </script>
 
     <p>Ajax Tutorial</p>
     <div class="container">
         <button id="b1" class="btn uploadBtn">Fetch Data</button>
         <button id="b2" class="btn button2">Populate</button>
-           </div>
-            
+        <!-- <button id="b3" class="btn button3">Button 3</button> -->
+    </div>
     <p>Employee List</p>
-    <p id="p"></p>
 </body>
 </html>
 

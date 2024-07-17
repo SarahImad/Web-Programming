@@ -1,0 +1,8 @@
+{
+    "name": "Buddy",
+    "species": "Dog",
+    "food": {
+        "likes": ["Chicken", "Bones"],
+        "dislikes": ["Broccoli", "fruits"]
+    }
+}

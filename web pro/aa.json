@@ -1,0 +1,11 @@
+[
+    {
+        "name": "alo",
+        "species": "cat",
+        "food": {
+            "likes": ["tuna", "seeds"],
+            "dislikes": ["ham", "zucchini"]
+        }
+    }
+]
+

@@ -1,0 +1,30 @@
+[
+    {
+      "name": "Sara",
+      "id": 1087070,
+      "hob": {
+        "long": 9,
+        "l": 8
+      },
+      "job": "student"
+    },
+    {
+      "name": "Emily",
+      "id": 987654,
+      "hob": {
+        "long": 7,
+        "l": 6
+      },
+      "job": "doctor"
+    },
+    {
+      "name": "Alex",
+      "id": 456789,
+      "hob": {
+        "long": 3,
+        "l": 2
+      },
+      "job": "teacher"
+    }
+  ]
+  

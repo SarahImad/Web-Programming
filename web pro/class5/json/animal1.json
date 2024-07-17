@@ -1,0 +1,8 @@
+{
+"name": "alo",
+"species" : "cat",
+"food":{
+    "likes": ["tune"," seeds"],
+    "dislikes": ["ham","zuchini"]
+}}
+

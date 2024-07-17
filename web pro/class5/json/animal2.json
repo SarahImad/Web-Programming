@@ -1,0 +1,8 @@
+[{
+    "name": "Tweetie",
+    "species": "Bird",
+    "food": {
+        "likes": ["Seeds", "Fruits"],
+        "dislikes": ["Meat", "Spicy foods"]
+    }
+}]
