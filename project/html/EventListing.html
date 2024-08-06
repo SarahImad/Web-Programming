@@ -1,0 +1,114 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listing</title>
+    <link rel="stylesheet" href="../css/EventListing.css">
+</head>
+
+<body onload = "displayAllEvents(); displayJoinedEvents(); isSignedIn()">
+ 
+    <div class = "navBar">
+        <a href="HomePage.html">Home</a>
+        <a href="CreateEvents.html">Create Events</a>
+        <a href="EventListing.html" style="text-decoration:underline;">View Events</a>
+        <a href="AboutDevelopers.html">About Developers</a>
+    </div>
+
+    <div id = "auth-buttons">
+        <button onclick = "signIn()">Sign In</button>
+        <button onclick = "signUp()">Sign Up</button>
+    </div>
+    
+    <div id="dim-overlay"></div>
+
+    <div id="pfp-container" onmouseenter="hoverOnPfp()" onmouseleave="notHoveringOnPfp()">
+        <img id="pfp" src="../images/pfp.png" alt="Profile Picture">
+
+        <div id="pfp-menu">
+            <button onclick="viewProfile()">View Profile</button>
+            <button onclick="logOut()">Log Out</button>
+        </div>
+
+    </div>
+
+    <div class="main-image"></div>
+    <div class="main-content">
+
+        <div class="filter-form">
+            <form id="filterForm">
+                <label>Category:</label>
+                <select id = "category" onchange="filterEvents()">
+                    <option value="" disabled selected>Select an event category</option>
+                    <option value="conference">Conference</option>
+                    <option value="workshop">Workshop</option>
+                    <option value="seminar">Seminar</option>
+                    <option value="webinar">Webinar</option>
+                    <option value="social">Social</option>
+                </select>
+
+                <label>Date:</label>
+                <input type = "date" id = "date" name = "date" onchange="filterEvents()">
+
+                <label>Location:</label>
+                <input type = "text" id = "location" name = "location" onchange="filterEvents()">
+
+                <label>Visibility:</label>
+                <label><input type="checkbox" id = "public" value = "public" onchange="filterEvents()"> Public</label>
+                <label><input type="checkbox" id ="private"  value = "private" onchange="filterEvents()"> Private</label>
+
+            </form>
+        </div>
+
+        <div id = "popup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <div id = "popupMessage"> </div>
+            </div>
+        </div>
+
+
+        <div class="search-bar">
+            <input type="text" id = "searchInput" placeholder="enter title here...">
+            <button id="searchButton"  onclick = "searchEvent()">Search</button>
+        </div>
+
+        <div class = "central-section" id = "central-section">
+            <!-- Events will be listed here -->
+        </div>
+
+        <div class = "joined-and-created">
+        <div class = "joined-events">
+            <div class="header">
+                <span>Joined Events</span>
+                <button id = "editJoined" onclick = "editJoined()">Edit</button>
+            </div>
+
+            <div id = "joined-events">
+            <!-- Joined events will be listed here -->
+            </div>
+
+        </div>
+
+        <div class="created-events">
+            <div class="header">
+                <span>Created Events</span>
+                <button id = "editCreated" onclick = "editCreated()">Edit</button>
+            </div>
+
+            <div id = "created-events">
+            <!-- Created events will be listed here -->
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <div class = "footer">
+        &copy; 2024 EventLink. All rights reserved.
+    </div>
+
+    <script src="../javaScript/EventListing.js"></script>
+</body>
+</html>

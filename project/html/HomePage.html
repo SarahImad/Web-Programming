@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EventLink</title>
+    <link rel="stylesheet" href="../css/HomeStyle.css" />
+</head>
+<body onload = isSignedIn()>
+    <div class="header">
+        <a href="HomePage.html" style="text-decoration:underline;">Home</a>
+        <a href="CreateEvents.html">Create Events</a>
+        <a href="EventListing.html">View Events</a>
+        <a href="AboutDevelopers.html">About Developers</a>
+    </div>
+
+    <div id = "auth-buttons">
+        <button onclick = "signIn()">Sign In</button>
+        <button onclick = "signUp()">Sign Up</button>
+    </div>
+
+    <div id="dim-overlay"></div>
+
+    <div id="pfp-container" onmouseenter="hoverOnPfp()" onmouseleave="notHoveringOnPfp()">
+        <img id="pfp" src="../images/pfp.png" alt="Profile Picture">
+
+        <div id="pfp-menu">
+            <button onclick="viewProfile()">View Profile</button>
+            <button onclick="logOut()">Log Out</button>
+        </div>
+
+    </div>
+
+
+    <header>
+        <h1>EventLink</h1>
+        <h3>"Connecting Communities, Empowering Volunteers"</h3>
+    </header>
+    <div class="container">
+        <p class="imgg">
+            <img src="../images/home4.png" alt="Description of home2 image" class="fixed-image" />
+        </p>
+    </div>
+    <div class="footer">
+        &copy; 2024 Your Company. All rights reserved.
+    </div>
+
+    <script src = "../javaScript/HomePage.js"></script>
+</body>
+</html>
